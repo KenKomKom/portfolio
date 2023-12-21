@@ -126,7 +126,7 @@ section {
 #navbar-p-name{
   justify-self: flex-start;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
   /* background-color: aquamarine; */
 }
 #navbar-p-other{
@@ -144,7 +144,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #222;
+  background-color: #2E2E3B;
 }
 
 .hor-banner{
@@ -152,7 +152,7 @@ section {
   flex-direction: column;
   align-items: center;
   background-color: ghostwhite;
-  color: #222;
+  color: #2E2E3B;
   height: 30vh;
   justify-content: center;
   text-align: center;
@@ -185,7 +185,7 @@ section {
   height: 100vh;
   width: 100%;
   background-color:darkslategray;
-  font-size: 28px;
+  font-size: 2rem;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   align-items: center ;
@@ -206,15 +206,16 @@ section {
 }
 
 #current-gpa{
-  font-size: 10vh;
+  position: absolute;
+  font-size: 3rem;
   margin: 0;
   padding: 0;
   /* line-height: 0; */
   letter-spacing: 0;
-  color: #AAA;
+  color: #EEE;
 }
 #ipk{
-  font-size: 100vh;
+  font-size: 30rem;
   margin: 0;
   padding: 0;
   line-height: 0.8;
@@ -257,11 +258,20 @@ section {
 #trying-padding{
   display: flex;
   flex-direction: column;
-  opacity: 0;
-  transition: all 1.2s ease-in;
+  opacity: 1;
 }
 
-#trying-padding.reveal{
+#trying-padding-container{
+  transition: all 0.9s ease;
+  /* background-image: url("./img/whisker-escape.png"); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+#trying-padding-container.reveal{
   opacity: 1;
 }
 
@@ -271,7 +281,7 @@ section {
 }
 
 #trying #typing{
-  font-size: 64px;
+  font-size: 3rem;
   font-weight: bold;
   font-family: 'Consolas';
   color: aquamarine;
@@ -286,7 +296,7 @@ section {
 }
 
 #experience{
-  background-color: #222;
+  background-color: #2E2E3B;
   color: ghostwhite;
   margin: 0;
   padding: 0;
@@ -298,9 +308,9 @@ section {
   /* align-items: center; */
 }
 #experience h1{
-  font-size: 36px;
-  top: 8%;
-  left: 15%;
+  font-size: 2.5rem;
+  top: 3rem;
+  left: 3.5rem;
   width: 0;
   height: 0;
   position: relative;
@@ -313,22 +323,23 @@ section {
 }
 
 .car-elem{
-  width: 100%;
+  width: 90%;
   height: 100%;
   display:flex;
   flex-direction: column;
   position: relative;
-  left: 15%;
-  top: 100px;
+  left: 3.5rem;
+  top: 6rem;
 }
 .car-elem li{
   margin-bottom: 0.5%;
   width: 62%;
-  font-size: small;
+  font-size: 0.8rem;
 }
-#ristek,#gdsc,#kmbui{
+
+#ristek, #gdsc,#kmbui{
   font-weight: bold;
-  font-size: 28px;
+  font-size: 1.5rem;
 }
 #ristek{
   color: #BB68D9;
@@ -374,4 +385,32 @@ footer>div{
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+}
+#bonus{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#rotating-container{
+  height: 80vh;
+  width: 90vw;
+  background-color:blueviolet;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+.rotating{
+  height: 100%;
+  width: 33.3333333%;
+  background-color: aquamarine;
+  display: inline;
+  transform: translateY(100px);
+}
+.img-container{
+  overflow: hidden;
+  width: 100%;
+  height: 70%;
+}
+.img-container img{
+  object-fit:cover;
 }

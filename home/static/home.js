@@ -25,9 +25,9 @@ function whiteNoise(){
     var whenToShow = 150;
     if(elementTop<windowHeight-whenToShow){
         reveals.classList.add("animate");
-        document.getElementById("trying-padding").classList.add("reveal");
+        document.getElementById("trying-padding-container").classList.add("reveal");
     }else{
-        document.getElementById("trying-padding").classList.remove("reveal");
+        document.getElementById("trying-padding-container").classList.remove("reveal");
         reveals.classList.remove("animate");
     }
 }
@@ -114,6 +114,19 @@ function ketik(){
     }
 }
 
+function movePicsUp(){
+    var belt=document.getElementById("rotating-1");
+    console.log(belt.children);
+    console.log(belt.children.item(0));
+    a = belt.children.item(0);
+    // belt.remove(a);
+    belt.removeChild(a);
+    console.log(belt.children)
+}
+function movePicsDown(){
+
+}
+
 var words = ["WebDev", "GameDev", "DataScience", "CP", "UI/UX"]
 var del = true;
 var justFinishDel = false;
@@ -123,7 +136,13 @@ setInterval(cursorBlink, 650);
 setInterval(()=>{
     a= setInterval(ketik, 90);
 }, 4000);
+
+// setInterval(()=>{
+//     b = setInterval(movePicsUp,100)
+// },100)
+
+window.addEventListener("pageshow", revealHorBanner)
+
 window.addEventListener("scroll", reveal)
 window.addEventListener("scroll", whiteNoise)
-window.addEventListener("pageshow", revealHorBanner)
 window.addEventListener("scroll", parallaxHeader)
