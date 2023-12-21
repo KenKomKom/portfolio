@@ -364,15 +364,15 @@ section {
   color: ghostwhite;
 }
 .kmbui{
-  background-image: url("./img/kmbui-back.png");
+  background-image: url("https://kenkomkom.github.io/portfolio/static/img/kmbui-back.png");
   background-size: cover;
 }
 .ristek{
-  background-image: url("./img/ristek.png");
+  background-image: url("https://kenkomkom.github.io/portfolio/static/img/ristek.png");
   background-size: cover;
 }
 .gdsc{
-  background-image: url("./img/gdsc.png");
+  background-image: url("https://kenkomkom.github.io/portfolio/static/img/gdsc.png");
   background-size: cover;
 }
 

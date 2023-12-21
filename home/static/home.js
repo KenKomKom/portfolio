@@ -134,7 +134,7 @@ var prior = "WebDev"
 
 setInterval(cursorBlink, 650);
 setInterval(()=>{
-    a= setInterval(ketik, 90);
+    a= setInterval(ketik, 100);
 }, 4000);
 
 // setInterval(()=>{
