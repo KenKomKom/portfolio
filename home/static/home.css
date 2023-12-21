@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:&display=swap');
 body {
   margin: 0px;
   padding: 0;
@@ -6,9 +5,9 @@ body {
   font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-ul{
+/* ul{
   list-style-type: none;
-}
+} */
 
 *::-webkit-scrollbar {
   width: 0;
@@ -134,7 +133,7 @@ section {
   margin-left: 10px;
   padding: 2px;
   width: 50%;
-  gap: 10px;
+  gap: 1rem;
   display: flex;
   justify-content: space-around;
 }
@@ -157,6 +156,7 @@ section {
   justify-content: center;
   text-align: center;
   gap:0;
+  margin-bottom: 1rem;
 }
 .hor-banner h1 h2 p{
   margin: 0;
@@ -176,9 +176,19 @@ section {
 .hor-banner h1{
   margin-bottom: 0;
   padding-bottom: 0;
+  font-size: 1.8rem;
+}
+.hor-banner h2{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 1.5rem;
 }
 .sizedbox{
-  height: 1000px;
+  height: 100%;
+  width: 100%;
+  background-color: #AAA;
+  mix-blend-mode: multiply;
+  position: absolute;
 }
 
 #trying{
@@ -300,7 +310,7 @@ section {
   color: ghostwhite;
   margin: 0;
   padding: 0;
-  height: 70vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -308,7 +318,7 @@ section {
   /* align-items: center; */
 }
 #experience h1{
-  font-size: 2.5rem;
+  font-size: 2rem;
   top: 3rem;
   left: 3.5rem;
   width: 0;
@@ -320,10 +330,13 @@ section {
 .car-img-container{
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .car-elem{
-  width: 90%;
+  width: 80%;
   height: 100%;
   display:flex;
   flex-direction: column;
@@ -333,8 +346,8 @@ section {
 }
 .car-elem li{
   margin-bottom: 0.5%;
-  width: 62%;
-  font-size: 0.8rem;
+  width: 80%;
+  font-size: 0.9rem;
 }
 
 #ristek, #gdsc,#kmbui{
@@ -348,7 +361,19 @@ section {
   color: #7362d4;
 }
 #kmbui{
-  color: #55BA89;
+  color: ghostwhite;
+}
+.kmbui{
+  background-image: url("./img/kmbui-back.png");
+  background-size: cover;
+}
+.ristek{
+  background-image: url("./img/ristek.png");
+  background-size: cover;
+}
+.gdsc{
+  background-image: url("./img/gdsc.png");
+  background-size: cover;
 }
 
 .car-elem span{
@@ -363,7 +388,7 @@ section {
   width: 100%;
   background-color: #2E2E3B;
 }
-.carousel-inner{
+.carousel-inner, .carousel-item{
   height: 100%;
 }
 #education{
@@ -390,6 +415,7 @@ footer>div{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
 }
 #rotating-container{
   height: 80vh;
@@ -399,12 +425,34 @@ footer>div{
   display: flex;
   flex-direction: row;
 }
-.rotating{
+#rotating-1, #rotating-2, #rotating-3{
   height: 100%;
   width: 33.3333333%;
   background-color: aquamarine;
+  background-repeat:repeat;
+  background-size: 100% 100%;
   display: inline;
-  transform: translateY(100px);
+  /* transform: translateY(100px); */
+}
+#rotating-1{
+  animation: moveDown 20s steps(1000) infinite;
+  background-image: url("./img/whisker-escape.png");
+}
+#rotating-2{
+  animation: moveUp 20s steps(1000) infinite;
+  background-image: url("./img/whisker-escape.png");
+}
+#rotating-3{
+  animation: moveDown 20s steps(1000) infinite;
+  background-image: url("./img/whisker-escape.png");
+}
+@keyframes moveDown {
+  from { background-position:    0px 0px; }
+    to { background-position: 0px 2000px; }
+}
+@keyframes moveUp {
+  from { background-position: 0px 2000px; }
+    to { background-position: 0px 0px; }
 }
 .img-container{
   overflow: hidden;
