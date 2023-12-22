@@ -55,6 +55,7 @@ function parallaxHeader(){
     let scrollY = window.scrollY;
 
     var par = document.getElementsByClassName("layer");
+    // console.log(par);
     var i=1;
     for(var i =0; i<par.length; i++){
         /*Jarak container paralax dari atas layar client*/
@@ -62,17 +63,22 @@ function parallaxHeader(){
         /*Kalo jarak elemen dari atas layar client=0(full screen) baru activate paralax di div ini
          * dan aktivasi berhenti abis udh offscreen containernya
         */
+    //    console.log(`elementTop:${elementTop}, ${window.innerHeight}`)
         if(-1*window.innerHeight<=elementTop && elementTop<=0){
-            console.log((scrollY-elementTop));
+            // console.log((scrollY-elementTop));
             if(i==0){
                 /* Gerak sebanyak negatif dari top of container ke layar client == 
                    berubah sebanyak persentase container yang udh hilang
                 */
                 par[i].style.transform = "translateY("+(-1*elementTop) * 1.05 +"px)";
             }else if(i==1){
-                par[i].style.transform = "translateY("+(-1*elementTop) * 0.75 +"px)";
+                par[i].style.transform = "translateY("+(-1*elementTop) * 0.30 +"px)";
+            }else if(i==2){
+                par[i].style.transform = "translateY("+(-1*elementTop) * 0.30 +"px)";
+            }else if(i==3){
+                par[i].style.transform = "translateY("+(-1*elementTop) * 0.1 +"px)";
             }
-            par[i].style.zIndex =-100;
+            // par[i].style.zIndex =-100;
         }
     }
 }
@@ -141,4 +147,4 @@ window.addEventListener("pageshow", changeWidth)
 
 window.addEventListener("scroll", reveal)
 window.addEventListener("scroll", whiteNoise)
-// window.addEventListener("scroll", parallaxHeader)
+window.addEventListener("scroll", parallaxHeader)
