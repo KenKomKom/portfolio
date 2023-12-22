@@ -1,3 +1,8 @@
+:root {
+  --height: 2000px;
+}
+
+
 body {
   margin: 0px;
   padding: 0;
@@ -157,7 +162,16 @@ section {
   text-align: center;
   gap:0;
   margin-bottom: 1rem;
+  text-decoration: none;
 }
+
+.hor-banner a:link {
+  color: #2E2E3B;
+}
+.hor-banner a:visited {
+  color: #2E2E3B;
+}
+
 .hor-banner h1 h2 p{
   margin: 0;
   padding: 0;
@@ -192,15 +206,16 @@ section {
 }
 
 #trying{
-  height: 100vh;
+  height: 110vh;
   width: 100%;
-  background-color:darkslategray;
+  background-color:#1d1d2a;
   font-size: 2rem;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   align-items: center ;
   justify-content: center;
   margin: 0;
+  padding: 0;
   color: ghostwhite;
 }
 
@@ -237,7 +252,7 @@ section {
 #trying-animate{
   position: absolute;
   width: 0%;
-  height: 0%;
+  height: 100%;
   background-color: aliceblue;
   opacity: 0;
 }
@@ -272,14 +287,14 @@ section {
 }
 
 #trying-padding-container{
-  transition: all 0.9s ease;
-  /* background-image: url("./img/whisker-escape.png"); */
+  transition: all 1.1s ease-in;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
   opacity: 0;
+  background-color: #2F4F4F;
 }
 #trying-padding-container.reveal{
   opacity: 1;
@@ -310,7 +325,7 @@ section {
   color: ghostwhite;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -364,15 +379,15 @@ section {
   color: ghostwhite;
 }
 .kmbui{
-  background-image: url("https://kenkomkom.github.io/portfolio/img/kmbui-back.png");
+  background-image: url("./img/kmbui-back.png");
   background-size: cover;
 }
 .ristek{
-  background-image: url("https://kenkomkom.github.io/portfolio/img/ristek.png");
+  background-image: url("./img/ristek.png");
   background-size: cover;
 }
 .gdsc{
-  background-image: url("https://kenkomkom.github.io/portfolio/img/gdsc.png");
+  background-image: url("./img/gdsc.png");
   background-size: cover;
 }
 
@@ -391,8 +406,45 @@ section {
 .carousel-inner, .carousel-item{
   height: 100%;
 }
-#education{
-  height: 50vh;
+
+#game{
+  padding: 4rem;
+  background-color: #2E2E3B;
+  color: ghostwhite;
+  display: flex;
+  justify-content: center;
+}
+#game-container{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  /* background-color: #7362d4; */
+}
+#game-title{
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+#game-column{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap:2rem;
+  font-size: 0.9rem;
+  width: 100%;
+}
+#game-column h2{
+  font-size: 1.5rem;
+}
+#game-column h3{
+  font-size: 0.8rem;
+}
+.pergame{
+  width: 80%;
+  overflow: hidden;
 }
 
 footer{
@@ -416,49 +468,52 @@ footer>div{
   flex-direction: column;
   align-items: center;
   padding: 2rem;
+  color: #2E2E3B;
+}
+#bonus h1{
+  font-weight: bold;
 }
 #rotating-container{
   height: 80vh;
-  width: 90vw;
+  width: 70vw;
   background-color:blueviolet;
   overflow: hidden;
   display: flex;
-  flex-direction: row;
+  gap: 1rem;
 }
 #rotating-1, #rotating-2, #rotating-3{
   height: 100%;
-  width: 33.3333333%;
+  width: 33.33333%;
   background-color: aquamarine;
-  background-repeat:repeat;
   background-size: 100% 100%;
   display: inline;
   /* transform: translateY(100px); */
 }
 #rotating-1{
-  animation: moveDown 20s steps(1000) infinite;
+  animation: moveDown 10s steps(1000) infinite;
   background-image: url("./img/whisker-escape.png");
+  background-size: 100% auto;
 }
 #rotating-2{
-  animation: moveUp 20s steps(1000) infinite;
+  animation: moveUp 10s steps(1000) infinite;
   background-image: url("./img/whisker-escape.png");
+  background-size: 100% auto;
 }
 #rotating-3{
-  animation: moveDown 20s steps(1000) infinite;
+  animation: moveDown 10s steps(1000) infinite;
   background-image: url("./img/whisker-escape.png");
+  background-size: 100% auto;
 }
 @keyframes moveDown {
-  from { background-position:    0px 0px; }
-    to { background-position: 0px 2000px; }
+  from { background-position:    0px var(--height); }
+    to { background-position: 0px 0px; }
 }
 @keyframes moveUp {
-  from { background-position: 0px 2000px; }
-    to { background-position: 0px 0px; }
+  from { background-position: 0px 0px; }
+    to { background-position: 0px var(--height); }
 }
 .img-container{
   overflow: hidden;
   width: 100%;
   height: 70%;
-}
-.img-container img{
-  object-fit:cover;
 }

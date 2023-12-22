@@ -114,17 +114,15 @@ function ketik(){
     }
 }
 
-function movePicsUp(){
-    var belt=document.getElementById("rotating-1");
-    console.log(belt.children);
-    console.log(belt.children.item(0));
-    a = belt.children.item(0);
-    // belt.remove(a);
-    belt.removeChild(a);
-    console.log(belt.children)
-}
-function movePicsDown(){
-
+function changeWidth(){
+    var rot = document.querySelector("#rotating-1");
+    console.log(rot);
+    var width = getComputedStyle(rot).width;
+    // console.log(typeof(width));
+    console.log(width);
+    var h = parseInt(width,10)*3;
+    console.log(h);
+    document.documentElement.style.setProperty('--height',`${h}px`);
 }
 
 var words = ["WebDev", "GameDev", "DataScience", "CP", "UI/UX"]
@@ -137,12 +135,10 @@ setInterval(()=>{
     a= setInterval(ketik, 90);
 }, 4000);
 
-// setInterval(()=>{
-//     b = setInterval(movePicsUp,100)
-// },100)
-
 window.addEventListener("pageshow", revealHorBanner)
+window.addEventListener("resize", changeWidth)
+window.addEventListener("pageshow", changeWidth)
 
 window.addEventListener("scroll", reveal)
 window.addEventListener("scroll", whiteNoise)
-window.addEventListener("scroll", parallaxHeader)
+// window.addEventListener("scroll", parallaxHeader)
