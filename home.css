@@ -116,12 +116,8 @@ section {
   flex-direction: row;
   align-items: center;
   width: 100%;
-  position: fixed;
-  bottom: 0;
   background-color: ghostwhite;
   color: #222;
-  height: min-content;
-  padding: 0;
 }
 .navbarr div{
   display: flex;
@@ -133,7 +129,6 @@ section {
   justify-self: flex-start;
   font-weight: 700;
   font-size: 1rem;
-  /* background-color: aquamarine; */
 }
 #navbar-p-other{
   height: 100%;
@@ -166,10 +161,10 @@ section {
   text-decoration: none;
 }
 
-.hor-banner a:link {
+.navbarr a:link {
   color: #2E2E3B;
 }
-.hor-banner a:visited {
+.navbarr a:visited {
   color: #2E2E3B;
 }
 
@@ -215,8 +210,8 @@ section {
 }
 
 #first-animate.active{
-    opacity: 1;
-    transform: translateY(0px);
+  opacity: 1;
+  transform: translateY(0px);
 }
 .hor-banner h1{
   margin-bottom: 0;
