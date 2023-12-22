@@ -1,5 +1,6 @@
 :root {
-  --height: 2000px;
+  --height-1: 2000px;
+  --height-2: 2000px;
 }
 
 
@@ -482,7 +483,7 @@ footer>div{
 #rotating-container{
   height: 80vh;
   width: 70vw;
-  background-color:blueviolet;
+  /* background-color:blueviolet; */
   overflow: hidden;
   display: flex;
   gap: 1rem;
@@ -490,33 +491,28 @@ footer>div{
 #rotating-1, #rotating-2, #rotating-3{
   height: 100%;
   width: 50%;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   background-size: 100% 100%;
   display: inline;
   /* transform: translateY(100px); */
 }
 #rotating-1{
-  animation: moveDown 10s steps(1000) infinite;
-  background-image: url("./img/whisker-escape.png");
+  animation: moveDown 30s steps(1000) infinite;
+  background-image: url("./img/rot1.png");
   background-size: 100% auto;
 }
 #rotating-2{
-  animation: moveUp 10s steps(1000) infinite;
-  background-image: url("./img/whisker-escape.png");
-  background-size: 100% auto;
-}
-#rotating-3{
-  animation: moveDown 10s steps(1000) infinite;
-  background-image: url("./img/whisker-escape.png");
+  animation: moveUp 30s steps(1000) infinite;
+  background-image: url("./img/rot2.png");
   background-size: 100% auto;
 }
 @keyframes moveDown {
-  from { background-position:    0px var(--height); }
+  from { background-position:    0px var(--height-1); }
     to { background-position: 0px 0px; }
 }
 @keyframes moveUp {
   from { background-position: 0px 0px; }
-    to { background-position: 0px var(--height); }
+    to { background-position: 0px var(--height-2); }
 }
 .img-container{
   overflow: hidden;

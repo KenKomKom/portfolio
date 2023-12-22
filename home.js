@@ -116,13 +116,13 @@ function ketik(){
 
 function changeWidth(){
     var rot = document.querySelector("#rotating-1");
-    console.log(rot);
     var width = getComputedStyle(rot).width;
-    // console.log(typeof(width));
-    console.log(width);
-    var h = parseInt(width,10)*3;
-    console.log(h);
-    document.documentElement.style.setProperty('--height',`${h}px`);
+    var h = parseInt(width,10)*7390/1165*2;
+    document.documentElement.style.setProperty('--height-1',`${h}px`);
+    rot=document.querySelector("#rotating-2");
+    width=getComputedStyle(rot).width;
+    var h = parseInt(width,10)*7954/1165*2;
+    document.documentElement.style.setProperty('--height-2',`${h}px`);
 }
 
 var words = ["WebDev", "GameDev", "DataScience", "CP", "UI/UX"]
