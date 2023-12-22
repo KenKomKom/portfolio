@@ -385,6 +385,7 @@ section {
 .ristek{
   background-image: url("./img/ristek.png");
   background-size: cover;
+  background-color: #8E819B;
 }
 .gdsc{
   background-image: url("./img/gdsc.png");
@@ -408,20 +409,21 @@ section {
 }
 
 #game{
-  padding: 4rem;
+  padding: 3rem 1rem 5rem 1rem;
   background-color: #2E2E3B;
   color: ghostwhite;
   display: flex;
   justify-content: flex-start;
+  align-items: flex-start;
 }
 #game-container{
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 2rem;
-  /* background-color: #7362d4; */
+  /* background-color: #7362d4;   */
 }
 #game-title{
   font-weight: bold;
