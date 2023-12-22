@@ -325,7 +325,7 @@ section {
   color: ghostwhite;
   margin: 0;
   padding: 0;
-  height: 90vh;
+  height: 80vh;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -489,7 +489,7 @@ footer>div{
 }
 #rotating-1, #rotating-2, #rotating-3{
   height: 100%;
-  width: 33.33333%;
+  width: 50%;
   background-color: aquamarine;
   background-size: 100% 100%;
   display: inline;
