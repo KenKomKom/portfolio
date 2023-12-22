@@ -412,7 +412,7 @@ section {
   background-color: #2E2E3B;
   color: ghostwhite;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 #game-container{
   display: flex;
@@ -443,8 +443,12 @@ section {
   font-size: 0.8rem;
 }
 .pergame{
-  width: 80%;
+  width: 100%;
   overflow: hidden;
+}
+#game iframe{
+  width: 70%;
+  height: auto;
 }
 
 footer{
