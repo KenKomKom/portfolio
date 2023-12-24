@@ -274,8 +274,8 @@ section {
 
 #trying-animate{
   position: absolute;
-  width: 100vw;
-  height: 110vh;
+  width: 100%;
+  height: 110%;
   background-color: aliceblue;
   opacity: 0;
 }
@@ -288,17 +288,17 @@ section {
 @keyframes changeOpac {
   0%   {
     width: 0%;
-    height: 110vh;
+    height: 110%;
     opacity: 1;
   }
   50%  {
-    width: 100vw;
-    height: 110vh;
+    width: 100%;
+    height: 110%;
     opacity: 1;
   }
   100% {
-    width: 100vw;
-    height: 110vh;
+    width: 100%;
+    height: 110%;
     opacity: 0;
   }
 }

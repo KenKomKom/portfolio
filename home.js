@@ -148,7 +148,7 @@ var prior = "WebDev"
 
 setInterval(cursorBlink, 650);
 setInterval(()=>{
-    a = setInterval(ketik, 100);
+    a = setInterval(ketik, 80);
 }, 4000);
 
 window.addEventListener("pageshow", revealHorBanner)
