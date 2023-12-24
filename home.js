@@ -94,10 +94,10 @@ function cursorBlink(){
 }
 
 function ketik(){
-    var ketik = document.getElementById("trying-ketik");
+    var ketikk = document.getElementById("trying-ketik");
     // console.log(ketik.innerHTML);
-    if(ketik.innerHTML.length>=1 && del){
-        ketik.innerHTML=ketik.innerHTML.substring(0,ketik.innerHTML.length-1);
+    if(ketikk.innerHTML.length>=1 && del){
+        ketikk.innerHTML=ketikk.innerHTML.substring(0,ketikk.innerHTML.length-1);
     }else if(del){
         del=false;
         justFinishDel = true;
@@ -110,8 +110,8 @@ function ketik(){
         prior=temp;
         justFinishDel=false;
     }else if(!del){
-        if(ketik.innerHTML!=prior){
-            ketik.innerHTML = prior.substring(0,ketik.innerHTML.length+1);
+        if(ketikk.innerHTML!=prior){
+            ketikk.innerHTML = prior.substring(0,ketikk.innerHTML.length+1);
         }else{
             // console.log("selesai ketik");
             del=true;
@@ -148,7 +148,7 @@ var prior = "WebDev"
 
 setInterval(cursorBlink, 650);
 setInterval(()=>{
-    a= setInterval(ketik, 100);
+    a = setInterval(ketik, 100);
 }, 4000);
 
 window.addEventListener("pageshow", revealHorBanner)

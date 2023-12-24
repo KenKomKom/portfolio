@@ -233,16 +233,13 @@ section {
 
 #trying{
   height: 110vh;
-  width: 100%;
+  width: 100vw;
   background-color:#1d1d2a;
   font-size: 2rem;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   align-items: center ;
   justify-content: center;
-  margin: 0;
-  padding: 0;
-  color: ghostwhite;
 }
 
 #trying-ipk{
@@ -277,8 +274,8 @@ section {
 
 #trying-animate{
   position: absolute;
-  width: 0%;
-  height: 100%;
+  width: 100vw;
+  height: 110vh;
   background-color: aliceblue;
   opacity: 0;
 }
@@ -291,17 +288,17 @@ section {
 @keyframes changeOpac {
   0%   {
     width: 0%;
-    height: 100%;
+    height: 110vh;
     opacity: 1;
   }
   50%  {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 110vh;
     opacity: 1;
   }
   100% {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 110vh;
     opacity: 0;
   }
 }
