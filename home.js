@@ -123,12 +123,22 @@ function ketik(){
 function changeWidth(){
     var rot = document.querySelector("#rotating-1");
     var width = getComputedStyle(rot).width;
-    var h = parseInt(width,10)*7390/1165*2;
-    document.documentElement.style.setProperty('--height-1',`${h}px`);
+    // console.log(`width rot-1 =${width}`);
+
+    var ratio = parseInt(width)/1165;
+    // console.log(`ratio ${ratio}`);
+
+    var h1 = 7690*ratio;
+    // console.log(`height rot-1 =${h}`);
+
+    document.documentElement.style.setProperty('--height-1',`${h1-((90)*ratio)}px`);
+
     rot=document.querySelector("#rotating-2");
     width=getComputedStyle(rot).width;
-    var h = parseInt(width,10)*7954/1165*2;
-    document.documentElement.style.setProperty('--height-2',`${h}px`);
+    // console.log(`width rot-2 =${width}`);
+    var h = 7954*ratio;
+    // console.log(`height rot-2 =${h}`);
+    document.documentElement.style.setProperty('--height-2',`${h-((80)*ratio)}px`);
 }
 
 var words = ["WebDev", "GameDev", "DataScience", "CP", "UI/UX"]

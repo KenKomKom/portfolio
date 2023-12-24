@@ -504,6 +504,7 @@ footer>div{
 }
 #bonus h1{
   font-weight: bold;
+  font-size: 2rem;
 }
 #rotating-container{
   height: 80vh;
@@ -522,12 +523,12 @@ footer>div{
   /* transform: translateY(100px); */
 }
 #rotating-1{
-  animation: moveDown 30s steps(2000) infinite;
+  animation: moveDown 10s steps(2000) infinite;
   background-image: url("./img/rot1.png");
   background-size: 100% auto;
 }
 #rotating-2{
-  animation: moveUp 30s steps(2000) infinite;
+  animation: moveUp 10s steps(2000) infinite;
   background-image: url("./img/rot2.png");
   background-size: 100% auto;
 }
