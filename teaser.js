@@ -118,4 +118,9 @@ for(var i=0; i<angka.length;i++){
     angka[i].addEventListener("click", numClick)
 }
 var prior = 1
-a = setInterval(numChange, 3000);
+a = setInterval(numChange, 4000);
+setTimeout(() => {
+    b = document.getElementById("sizedbox");
+    b.style.opacity=0;
+    b.style.zIndex=-1;
+}, 8100);
