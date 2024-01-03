@@ -225,8 +225,8 @@ section {
 }
 .sizedbox{
   height: 100%;
-  width: 100%;
-  background-color: #AAA;
+  width: 100%;  
+  background-color: #5c5c5c;
   mix-blend-mode: multiply;
   position: absolute;
 }
@@ -396,10 +396,10 @@ section {
   color: #BB68D9;
 }
 #gdsc{
-  color: #7362d4;
+  color: #75bcff;
 }
 #kmbui{
-  color: ghostwhite;
+  color: rgb(110, 228, 122);
 }
 .kmbui{
   background-image: url("./img/kmbui-back.png");
