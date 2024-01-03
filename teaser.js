@@ -123,4 +123,4 @@ setTimeout(() => {
     b = document.getElementById("sizedbox");
     b.style.opacity=0;
     b.style.zIndex=-1;
-}, 100);
+}, 8050);
