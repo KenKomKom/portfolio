@@ -433,9 +433,6 @@ section {
 .carousel-inner, .carousel-item{
   height: 100%;
 }
-.carousel-item{
-  cursor: pointer;
-}
 
 #game{
   padding: 3rem 1rem 5rem 1rem;
