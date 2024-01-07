@@ -141,6 +141,52 @@ function changeWidth(){
     document.documentElement.style.setProperty('--height-2',`${h-((80)*ratio)}px`);
 }
 
+let carousel =  document.getElementsByClassName("carousel")[0];
+console.log(carousel)
+let isDragging = false;
+let xPosStart=0;
+function dragStart(){
+    isDragging = true;
+
+}
+function dragStop(){
+    isDragging = false;
+    
+}
+function dragging(e){
+    // console.log(carousel);
+    if(isDragging){
+        e.preventDefault();
+        // let aa = carousel.carousel();
+        // console.log(aa);
+    }else {
+        // console.log(isDragging);
+        return isDragging;
+    }
+    
+}
+$('.carousel').on('touchstart', function(event){
+    console.log("in")
+    const xClick = event.originalEvent.touches[0].pageX;
+    $(this).one('touchmove', function(event){
+        const xMove = event.originalEvent.touches[0].pageX;
+        const sensitivityInPx = 5;
+
+        if( Math.floor(xClick - xMove) > sensitivityInPx ){
+            $(this).carousel('next');
+        }
+        else if( Math.floor(xClick - xMove) < -sensitivityInPx ){
+            $(this).carousel('prev');
+        }
+    });
+    $(this).on('touchend', function(){
+        $(this).off('touchmove');
+    });
+});
+carousel.addEventListener("mousemove", dragging)
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mouseup", dragStop);
+
 var words = ["WebDev", "GameDev", "DataScience", "CP", "UI/UX"]
 var del = true;
 var justFinishDel = false;

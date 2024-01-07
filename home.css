@@ -427,8 +427,14 @@ section {
   width: 100%;
   background-color: #2E2E3B;
 }
+#carouselExampleIndicators li{
+  cursor: pointer;
+}
 .carousel-inner, .carousel-item{
   height: 100%;
+}
+.carousel-item{
+  cursor: pointer;
 }
 
 #game{

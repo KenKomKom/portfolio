@@ -79,6 +79,7 @@ p{
 .number:hover{
     outline-color: #ffae8c;
     transition: .5s all ease; 
+    cursor: pointer;
   }
 .number p{
     font-size: 0.8rem;
